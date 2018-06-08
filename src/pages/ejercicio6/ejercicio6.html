@@ -1,0 +1,71 @@
+<!--
+  Generated template for the Ejercicio6Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ejercicio6</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <h6>
+      Con los 150 alumnos de las diviciones de cuarto año se realizo una encuesta sobre el numero de Hermanos
+      en edad escolar, obteniendose los siguientes resultados:
+    </h6>
+    <h6>A)Determine poblacion, unidad elemental y escala de medicion.</h6>
+    <h6>B)Construya la tabla de frecuencias simples y acumuladas.</h6>
+    <h6>C)Represente graficamente.</h6>
+
+    <h6>A)Poblacion= 150, Unidad Elemental= N˚ de hermanos, Escala de Medicion= Escala de Proporcion/Razon</h6>
+    <h6>B)</h6>
+    <table border='1' class="data-table" style="text-align: center;">
+      <tr>
+        <td>N˚ de Hermanos</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td><ion-item text-center>fi</ion-item></td>
+        <td><ion-input text-center [(ngModel)]="fi1"  (ionChange)="sumar1($event.value)"></ion-input></td>
+        <td><ion-input text-center [(ngModel)]="fi2"  (ionChange)="sumar2($event.value)" ></ion-input></td>
+        <td><ion-input text-center [(ngModel)]="fi3"  (ionChange)="sumar3($event.value)" ></ion-input></td>
+        <td><ion-input text-center [(ngModel)]="fi4"  (ionChange)="sumar4($event.value)" ></ion-input></td>
+        <td><ion-input text-center [(ngModel)]="fi5"  (ionChange)="sumar5($event.value)" ></ion-input></td>
+        <td><ion-input text-center [(ngModel)]="fi6"  (ionChange)="sumar6($event.value)" ></ion-input></td>
+      </tr>
+      <tr>
+        <td><ion-item text-center>Fi</ion-item></td>
+        <td>{{Fii1}}</td>
+        <td>{{Fii2}}</td>
+        <td>{{Fii3}}</td>
+        <td>{{Fii4}}</td>
+        <td>{{Fii5}}</td>
+        <td>{{Fii6}}</td>
+      </tr>
+     </table>
+
+     <h6>C)</h6>
+    <ion-card>
+        <ion-card-header>
+          
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barCanvas></canvas>
+          <h3 style="text-align: center;" >N˚ de Hermanos</h3>
+        </ion-card-content>
+
+      </ion-card>
+
+</ion-content>

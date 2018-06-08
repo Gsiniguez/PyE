@@ -1,14 +1,62 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Probabilidad y Estadistica
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <h6>
+    Para estudiar la relacion entre el habito de fumar y la aparicion de Cardioptia Coronaria, se observan 80 fumadores y 70
+    no fumadores durante un periodo de tiempo, con el siguiente resultado: 35 de los primeros y 16 de los segundos presentaron
+    dicha enfermedad. Este estudio se realizo en el Hospital Llano de la Ciudad de Corrientes en 1993. Los datos fueron suministrados
+    por el Ministerio de Salud de la Provincia de Corrientes.
+  </h6>
+
+  <h6>A) Confeccione una tabla estadistica.</h6>
+  <h6>B) Represente graficamente los datos.</h6>
+
+
+
+
+  <h5>A)</h5>
+  <table border='1' class="data-table" style="text-align: center;">
+    <tr>
+      <td></td>
+      <td>Enfermos</td>
+      <td>Total</td>
+    </tr>
+    <tr>
+      <td>Fumadores</td>
+      <td>
+        <ion-input text-center [(ngModel)]="e1" (ionChange)="ionViewDidLoad()"></ion-input>
+      </td>
+      <td>
+        <ion-input text-center [(ngModel)]="t1" (ionChange)="ionViewDidLoad()"></ion-input>
+      </td>
+    </tr>
+    <tr>
+      <td>No Fumadores</td>
+      <td>
+        <ion-input text-center [(ngModel)]="e2" (ionChange)="ionViewDidLoad()"></ion-input>
+      </td>
+      <td>
+        <ion-input text-center [(ngModel)]="t1" (ionChange)="ionViewDidLoad()"></ion-input>
+      </td>
+    </tr>
+  </table>
+
+  <h5>B)</h5>
+  <ion-card>
+    <ion-card-header>
+      <h5 style="text-align: center;">Relacion entre el habito de fumar y</h5>
+      <h5 style="text-align: center;">aparicion de Cardiopatia Coronaria.</h5>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
